@@ -1,10 +1,10 @@
 name: api
 auth: bearer
 environments:
-  Production:
-    url: 
-    docs:
+  Production: 
+    url: https://api.uat-isac.happay.in
+    docs: Base URL for UAT
   Sandbox:
-    url:
-    docs:
+    url: https://api.isac.happay.in
+    docs: Base URL for PRODUCTION
 default-environment: Production

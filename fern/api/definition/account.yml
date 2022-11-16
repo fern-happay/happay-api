@@ -1,0 +1,58 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/fern-api/fern/main/fern.schema.json
+
+services:
+  http:
+    AccountService:
+      docs: Accounts holds the money for Users. It acts as a wallet from where spends occur. In this section, Developer will find APIs related to CRUD operations of Accounts.
+      base-path: /account
+      auth: true 
+      headers: 
+        App-ID:
+          type: string 
+          docs: | 
+            unique app ID, generated during app registration
+            eg: app_36c3e32a-dc18-11e8-89bd-0242ac130002
+        App-Token: 
+          type: string 
+          docs: | 
+            session token for App
+            eg: BO8SS05DS4Q9K1GRONRBP
+        Request-ID: 
+          type: string 
+          docs: | 
+            unique request ID for App
+            eg: 75ff8b82-bca8-11e8-a355-529269fb1459
+
+      endpoints:
+        createAccount:
+          docs: This API creates an Account for a User. There are two types of account can be created, PREPAID and LIMIT.
+          method: POST 
+          path: /
+          request: CreateAccountRequest
+          response: CreateAccountResponse
+
+types:
+  CreateAccountRequest:
+    properties:
+      account_type: AccountTypes
+      user_id: 
+        docs: "eg: usr_5a33fa01ce4b4113a11ceb5c17c601c5"
+        type: string  
+
+  CreateAccountResponse: 
+    properties:
+      account_id: 
+        type: string 
+        docs: |
+          unique reference of this account
+          eg: acc_db7ca20c268045f6bcdb27af064c19c4
+      user_id: 
+        type: string
+        docs: | 
+          unique reference of the user
+          eg: usr_5a33fa01ce4b4113a11ceb5c17c601c5
+
+  AccountTypes:
+    enum:
+      - PREPAID
+      - LIMIT
