@@ -1,5 +1,5 @@
 name: api
-auth: bearer
+auth: bearer #confirm Happay uses OAuth2
 environments:
   Production: 
     url: https://api.uat-isac.happay.in
