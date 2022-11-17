@@ -2,7 +2,7 @@ groups:
   external:
     generators:
       - name: fernapi/fern-typescript-sdk
-        version: 0.0.233
+        version: 0.0.235
         output:
           location: npm
           package-name: '@fern-api/happay'
