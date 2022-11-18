@@ -3,7 +3,9 @@
 Tagging a release on this repository will update the:
 
 - [TypeScript SDK repo](https://github.com/fern-happay/happay-node)
+- [Java SDK repo](https://github.com/fern-happay/happay-java)
 - [Postman collection repo](https://github.com/fern-happay/happay-postman)
+- [OpenAPI description repo](https://github.com/fern-happay/happay-openapi)
 - _More SDKs to come..._
 
 ## What is in this repository?
