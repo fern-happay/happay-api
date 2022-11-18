@@ -10,7 +10,7 @@ groups:
         github:
           repository: fern-happay/happay-node
       - name: fernapi/fern-java-sdk
-        version: 0.0.125
+        version: 0.0.126
         output:
           location: maven
           coordinate: io.github.fern-api:happay
